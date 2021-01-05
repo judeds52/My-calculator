@@ -1,0 +1,75 @@
+<div class="wrapper">
+  <div class="calc">
+    <div class="calc__display">
+      <div id="expression" class="calc__display--expression">{{input}}</div>
+      <div id="display" class="calc__display--result">{{result}}</div>
+    </div>
+    <div class="calc__buttons">
+      <table>
+        <tbody>
+          <tr>
+            <td colspan="2">
+              <button id="clear" (click)="allClear()" class="calc__buttons--button width-2 red">AC</button>
+            </td>
+            <td>
+              <button id="divide" class="calc__buttons--button action" (click)="pressOperator('/')" data-exp="/">/</button> 
+            </td>
+            <td>
+              <button id="multiply" class="calc__buttons--button action" (click)="pressOperator('*')" data-exp="*">X</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="one" (click)="pressNum('1')" class="calc__buttons--button number">1</button>
+            </td>
+            <td>
+              <button id="two" (click)="pressNum('2')"class="calc__buttons--button number">2</button>  
+            </td>
+            <td>
+              <button id="three" (click)="pressNum('3')"  class="calc__buttons--button number">3</button>
+            </td>
+            <td>
+              <button id="subtract" class="calc__buttons--button action" (click)="pressOperator('-')" data-exp="-">-</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="four" (click)="pressNum('4')" class="calc__buttons--button number">4</button>
+            </td>
+            <td>
+              <button id="five"  (click)="pressNum('5')" class="calc__buttons--button number">5</button>  
+            </td>
+            <td>
+              <button id="six" (click)="pressNum('6')" class="calc__buttons--button number">6</button>
+            </td>
+            <td>
+              <button id="add" class="calc__buttons--button action" (click)="pressOperator('+')" data-exp="+">+</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="seven" (click)="pressNum('7')" class="calc__buttons--button number">7</button>
+            </td>
+            <td>
+              <button id="eight" (click)="pressNum('8')" class="calc__buttons--button number">8</button>  
+            </td>
+            <td>
+              <button id="nine" (click)="pressNum('9')" class="calc__buttons--button number">9</button>
+            </td>
+            <td rowspan="2">
+              <button id="equals" class="calc__buttons--button height-2 orange" (click)="getAnswer()">=</button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button id="zero" (click)="pressNum('0')" class="calc__buttons--button width-2 number">0</button>
+            </td>
+            <td>
+              <button id="decimal" (click)="pressNum('.')" class="calc__buttons--button number">.</button>  
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
